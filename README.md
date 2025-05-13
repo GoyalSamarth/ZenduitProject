@@ -19,7 +19,7 @@ This is an Angular 17+ project built with Angular Material, featuring a Submissi
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/your-username/zenduit-project.git
+git clone https://github.com/GoyalSamarth/ZenduitProject.git
 cd zenduit-project
 ```
 
