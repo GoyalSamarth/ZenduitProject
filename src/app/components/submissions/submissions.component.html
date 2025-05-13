@@ -39,17 +39,17 @@
     (change)="toggleView(currentView)"
     class="view-toggle"
     
-    style="border-radius: 8px; width: 180px; background-color: white; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;"
+    style=" width: 180px; background-color: white; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;"
   >
     <mat-button-toggle
       value="map"
       [ngClass]="{ 'active-toggle': currentView === 'map' }"
-      style="color: #2188D9; border-radius: 8px; flex: 1; display: flex; justify-content: center; align-items: center; height: 56px; width: 100%; text-align: center;"
+      style="color: #2188D9;  flex: 1; display: flex; justify-content: center; align-items: center; height: 56px; width: 100%; text-align: center;"
     >Map</mat-button-toggle>
     <mat-button-toggle
       value="list"
       [ngClass]="{ 'active-toggle': currentView === 'list' }"
-      style="color: #2188D9; border-radius: 8px; flex: 1; display: flex; justify-content: center; align-items: center; height: 56px; width: 100%; text-align: center;"
+      style="color: #2188D9;  flex: 1; display: flex; justify-content: center; align-items: center; height: 56px; width: 100%; text-align: center;"
     >List</mat-button-toggle>
   </mat-button-toggle-group>
 

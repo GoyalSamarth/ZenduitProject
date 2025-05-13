@@ -140,9 +140,9 @@ td {
   margin: 0 5px;
   cursor: pointer;
   font-size: 14px;
-  border-radius: 4px; /* Added border-radius for the chevron button */
-  width: 30px; /* Ensure size consistency */
-  height: 30px; /* Ensure size consistency */
+  border-radius: 4px;
+  width: 30px;
+  height: 30px; 
 
   &.chevron {
     display: flex;
@@ -161,12 +161,12 @@ td {
   cursor: pointer;
   font-size: 14px;
   color: #555;
-  border-radius: 4px; /* Added border-radius for the page number buttons */
+  border-radius: 4px; 
 
   &.current {
     background-color: #fff;
-    border: 2px solid #2188D9; /* Blue border for the current page */
-    color: #2188D9; /* Text color for the selected page */
+    border: 2px solid #2188D9; 
+    color: #2188D9; 
   }
 
   &:disabled {
@@ -183,6 +183,9 @@ td {
   color: #555;
 }
 
+.red-text {
+  color: red;
+}
 
 
 

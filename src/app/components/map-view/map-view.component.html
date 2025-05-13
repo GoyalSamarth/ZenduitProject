@@ -1,6 +1,6 @@
 <div class="map-view-container">
   <div class="left-panel ">
-    <div *ngFor="let submission of submissions" class="submission-entry">
+    <div *ngFor="let submission of submissions; let i = index" class="submission-entry">
       <!-- Top Row: Task Title + Status Label -->
       <div class="top-row">
         <div class="task-title">{{ submission.task }}</div>
@@ -16,7 +16,7 @@
       <div class="info-line"><strong>To:</strong> {{ submission.to }}</div>
       <div class="info-line">
         <strong>Due Date:</strong>
-        <span >
+        <span [ngClass]="{'red-text' : i === 0}">
           {{ submission.dueDate }}
         </span>
       </div>
