@@ -1,0 +1,36 @@
+<div class="map-view-container">
+  <div class="left-panel ">
+    <div *ngFor="let submission of submissions" class="submission-entry">
+      <!-- Top Row: Task Title + Status Label -->
+      <div class="top-row">
+        <div class="task-title">{{ submission.task }}</div>
+        <div class="status-chip" [ngClass]="submission.status.toLowerCase().replace(' ', '-')">
+
+          <div class="status-dot"></div>
+          {{ submission.status }}
+        </div>
+      </div>
+
+      <!-- Additional Info -->
+      <div class="info-line"><strong>From:</strong> {{ submission.from }}</div>
+      <div class="info-line"><strong>To:</strong> {{ submission.to }}</div>
+      <div class="info-line">
+        <strong>Due Date:</strong>
+        <span >
+          {{ submission.dueDate }}
+        </span>
+      </div>
+    </div>
+  </div>
+  <!-- Right Panel: Google Map -->
+  <div class="right-map">
+    <google-map height="100%" width="100%" [center]="center" [zoom]="zoom">
+      <map-marker *ngFor="let marker of markers"
+                  [position]="marker.position"
+                  [label]="marker.label"
+                  [title]="marker.title"
+                  (mapClick)="onMarkerClick(marker)">
+      </map-marker>
+    </google-map>
+  </div>
+</div>

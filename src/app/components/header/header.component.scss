@@ -1,0 +1,62 @@
+.zendu-header {
+  background-color: #2188D9;
+  color: white;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+
+  .logo {
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .nav-menu {
+    display: flex;
+    gap: 24px;
+
+    .nav-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+
+      mat-icon {
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+      }
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+
+      &.active {
+        background-color: #1773BB;
+        color: white;
+        font-weight: 600;
+        width: 100%;
+
+        mat-icon {
+          color: white;
+        }
+      }
+    }
+  }
+
+  .header-icons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    button {
+      color: white;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.submission-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  margin-left: 42px;
+}
+
+.controls {
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  margin-left: 25px;
+
+}
+
+.filter-item {
+  min-width: 100px;
+  
+}
+
+.view-toggle {
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden;
+
+  ::ng-deep .mat-button-toggle-appearance-legacy {
+    background-color: #f0f0f0;
+    color: black;
+  }
+
+  ::ng-deep .mat-button-toggle-checked {
+    background-color: #2188D9 !important;
+    color: white !important;
+  }
+}
+
+

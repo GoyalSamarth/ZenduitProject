@@ -1,0 +1,189 @@
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.table-container {
+  margin: 0 24px;
+  overflow-x: auto;
+}
+
+table{ 
+    background-color: #ffffff; 
+    border: 1px solid #0000; 
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(128, 128, 128, 0.2);
+    overflow: hidden;
+}
+  th{
+    background-color: #ffffff;
+    font-weight: 600;
+} 
+td {
+    background-color: #ffffff; // ensure all cells stay white
+    
+  }
+
+
+.pagination-container {
+  margin-top: 16px;
+  margin-left: 24px;
+  margin-right: 24px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.full-width-table {
+  width: 100%;
+  min-width: 800px;
+  background-color: white;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  overflow: hidden;
+}
+
+.task-text {
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+
+.status-chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 14px;
+  border: 1px solid;
+  width: fit-content;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+/* Low Risk: Green border, green text, green dot, light grey background */
+.low-risk {
+  border-color: green;
+  background-color: #f0f0f0;
+  color: green;
+
+  .status-dot {
+    background-color: green;
+  }
+}
+
+/* Uncomplete: Red border, red text, red dot, light grey background */
+.uncomplete {
+  border-color: red;
+  background-color: #f0f0f0;
+  color: red;
+
+  .status-dot {
+    background-color: red;
+  }
+}
+
+/* Unassigned: Light gray everything */
+.unassigned {
+  border-color: #ccc;
+  background-color: #f5f5f5;
+  color: #999;
+
+  .status-dot {
+    background-color: #999;
+  }
+}
+
+/* High Risk: Red solid (or keep default from before if needed) */
+.high-risk {
+  border-color: red;
+  background-color: #ffe5e5;
+  color: red;
+
+  .status-dot {
+    background-color: red;
+  }
+}
+
+
+.pagination-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 40px;
+  position: relative;
+}
+
+.page-range {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.pagination-controls {
+  display: flex;
+  align-items: center;
+}
+
+.pagination-btn {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin: 0 5px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px; /* Added border-radius for the chevron button */
+  width: 30px; /* Ensure size consistency */
+  height: 30px; /* Ensure size consistency */
+
+  &.chevron {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    
+    
+  }
+}
+
+.pagination-page-btn {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #555;
+  border-radius: 4px; /* Added border-radius for the page number buttons */
+
+  &.current {
+    background-color: #fff;
+    border: 2px solid #2188D9; /* Blue border for the current page */
+    color: #2188D9; /* Text color for the selected page */
+  }
+
+  &:disabled {
+    color: #aaa;
+    cursor: not-allowed;
+  }
+
+  &:hover {
+    background-color: #f2f2f2;
+  }
+}
+
+.mat-icon {
+  color: #555;
+}
+
+
+
+
+
