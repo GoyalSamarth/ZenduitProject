@@ -1,63 +1,70 @@
-<<<<<<< HEAD
+
 # ZenduitProject
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.11.
+This is an Angular 17+ project built with Angular Material, featuring a Submissions page with a Map/List toggle, mock data, Google Maps integration, and a date picker. The UI is based on a provided Figma design and themed using a custom Azure/Blue palette.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Features
 
+- List and Map toggle view for submissions
+- Interactive Google Map with markers
+- Export button for data
+- Angular Material date picker
+- Themed with Angular Material's theming system
+
+---
+
+## 🛠️ Project Setup (Local Development)
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/GoyalSamarth/ZenduitProject.git
+cd zenduit-project
+```
+
+### 2. Install Dependencies
+```bash
+npm install
+```
+
+### 3. Run the development server
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## ⚙️ Environment Configuration 
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
+### Need to add the API key in src/environments/environment.ts
 ```bash
-ng generate component component-name
+export const environment = {
+  production: false,
+  googleMapsAPIKey: 'YOUR GOOGLE MAP API KEY ' 
+};
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
+### Need API key in src/environments/environment.prod.ts
 ```bash
-ng generate --help
+export const environment = {
+  production: true,
+  googleMapsAPIKey: 'YOUR GOOGLE MAP API KEY ' 
+};
 ```
 
-## Building
+## 📦 Build for production 
 
-To build the project run:
-
+### To build the application for production 
 ```bash
-ng build
+ng build --configuration=production
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## 🧪 Liniting 
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
+### Runs ESLint to catch issues
 ```bash
-ng test
+ng lint
 ```
 
-## Running end-to-end tests
+## Author
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-=======
-# ZenduitProject
->>>>>>> bc8a734306804c47289b764f937d88757c82d638
+**Samarth Goyal**
