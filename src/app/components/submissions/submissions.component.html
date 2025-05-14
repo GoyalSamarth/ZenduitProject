@@ -1,15 +1,16 @@
 <h2 class="submission-title">Submissions</h2>
 
-<div class="controls mat-elevation-z2" style="display: flex; flex-wrap: wrap; gap: 5rem; align-items: center;">
+<div class="controls mat-elevation-z2" >
   <!-- Search Input -->
-  <mat-form-field appearance="outline" class="filter-item" style="border-radius: 8px; width: 180px; ">
+  <mat-form-field appearance="outline" class="filter-item-search">
+    <mat-icon matPrefix>search</mat-icon>
     <mat-label>Search</mat-label>
     <input matInput placeholder="Search submissions..." [(ngModel)]="searchQuery">
-    <mat-icon matSuffix>search</mat-icon>
+    
   </mat-form-field>
 
   <!-- Select Form -->
-  <mat-form-field  appearance="outline" class="filter-item" style="border-radius: 8px; background-color: white; width: 180px;">
+  <mat-form-field  appearance="outline" class="filter-item" >
     <mat-label>Select Form</mat-label>
     <mat-select [(value)]="selectedForm">
       <mat-option *ngFor="let form of forms" [value]="form">{{ form }}</mat-option>
@@ -17,7 +18,7 @@
   </mat-form-field>
 
   <!-- Select Status -->
-  <mat-form-field appearance="outline" class="filter-item" style="border-radius: 8px; background-color: white; width: 180px;">
+  <mat-form-field appearance="outline" class="filter-item" >
     <mat-label>Select Status</mat-label>
     <mat-select [(value)]="selectedStatus">
       <mat-option *ngFor="let status of statuses" [value]="status">{{ status }}</mat-option>
@@ -25,23 +26,25 @@
   </mat-form-field>
 
   <!-- Date Picker -->
-  <mat-form-field appearance="outline" class="filter-item" style="border-radius: 8px; background-color: white; width: 180px;">
+  <mat-form-field appearance="outline" class="filter-item" >
     <mat-label>Date</mat-label>
     <input matInput [matDatepicker]="picker" [(ngModel)]="selectedDate">
-    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker-toggle matPrefix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
 
   <!-- Map/List Toggle -->
-   
+   <div class="toggle">
   <mat-button-toggle-group
+  [hideSingleSelectionIndicator]="true"
     [(ngModel)]="currentView"
     (change)="toggleView(currentView)"
     class="view-toggle"
     
-    style=" width: 180px; background-color: white; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;"
+    
   >
     <mat-button-toggle
+    
       value="map"
       [ngClass]="{ 'active-toggle': currentView === 'map' }"
       style="color: #2188D9;  flex: 1; display: flex; justify-content: center; align-items: center; height: 56px; width: 100%; text-align: center;"
@@ -57,6 +60,8 @@
   <button mat-button color="primary" (click)="exportData()" style="height: 56px; margin-bottom: 20px;">
     <mat-icon>download</mat-icon> Export
   </button>
+
+  </div>
   
 </div>
 

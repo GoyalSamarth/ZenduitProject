@@ -58,5 +58,34 @@
     button {
       color: white;
     }
+
+   
+  }
+  // Responsive styles for mobile screens
+   @media (max-width: 768px) {
+    flex-direction: column; 
+    height: auto; 
+    padding: 16px; 
+
+    .logo {
+      font-size: 20px; 
+    }
+
+    .nav-menu {
+      flex-direction: column; 
+      gap: 12px; 
+
+      .nav-item {
+        font-size: 12px; 
+        padding: 8px; 
+      }
+    }
+
+    .header-icons {
+      margin-top: 12px; 
+      gap: 8px; 
+    }
+
+    
   }
 }

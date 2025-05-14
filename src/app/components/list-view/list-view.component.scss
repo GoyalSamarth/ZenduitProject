@@ -21,7 +21,7 @@ table{
     font-weight: 600;
 } 
 td {
-    background-color: #ffffff; // ensure all cells stay white
+    background-color: #ffffff; 
     
   }
 
@@ -67,7 +67,7 @@ td {
   border-radius: 50%;
 }
 
-/* Low Risk: Green border, green text, green dot, light grey background */
+
 .low-risk {
   border-color: green;
   background-color: #f0f0f0;
@@ -78,7 +78,7 @@ td {
   }
 }
 
-/* Uncomplete: Red border, red text, red dot, light grey background */
+
 .uncomplete {
   border-color: red;
   background-color: #f0f0f0;
@@ -89,7 +89,7 @@ td {
   }
 }
 
-/* Unassigned: Light gray everything */
+
 .unassigned {
   border-color: #ccc;
   background-color: #f5f5f5;
@@ -100,7 +100,7 @@ td {
   }
 }
 
-/* High Risk: Red solid (or keep default from before if needed) */
+
 .high-risk {
   border-color: red;
   background-color: #ffe5e5;
@@ -187,6 +187,33 @@ td {
   color: red;
 }
 
+// Responsive styles for mobile screens
+@media (max-width: 768px) {
+  .pagination-container {
+    flex-direction: column; 
+    align-items: center; 
+    gap: 10px; 
+    margin-top: 20px; 
+  }
 
+  .page-range {
+    position: static; 
+    margin-bottom: 10px; 
+    text-align: center; 
+  }
+
+  .pagination-controls {
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 5px; 
+  }
+
+  .pagination-btn,
+  .pagination-page-btn {
+    width: auto; 
+    padding: 5px 8px; 
+    font-size: 12px; 
+  }
+}
 
 

@@ -119,3 +119,24 @@ google-map {
 .red-text{
   color: red;
 }
+
+// Responsive styles for mobile screens
+@media (max-width: 768px) {
+  .map-view-container {
+    flex-direction: column; 
+  }
+
+  .left-panel {
+    width: 100%; 
+    margin-bottom: 16px; 
+  }
+
+  .right-map {
+    margin-top: 0; 
+    height: auto;
+  }
+
+  google-map {
+    height: 300px; 
+  }
+}
